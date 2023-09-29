@@ -1,2 +1,2 @@
 # Mukhyansh
-This repository contains Mukhyansh dataset and code base.
+Data and Code files will be realeased soon.
