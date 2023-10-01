@@ -1,8 +1,6 @@
 # Mukhyansh
 
-Welcome to the Mukhyansh Dataset Repository
-
-This repository is dedicated to the Mukhyansh dataset. Here, you will find the following resources:
+This repository is dedicated to the paper titled Mukhyansh: A Headline Generation Dataset for Indic Languages. Here, you will find the following resources:
 
 1. **Dataset**: Will be realeased soon.
 
