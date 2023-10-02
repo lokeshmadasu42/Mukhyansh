@@ -11,7 +11,6 @@ This repository is dedicated to the paper titled [**"Mukhyansh: A Headline Gener
 ## Table of Contents
 
 - [Mukhyansh](#Mukhyansh)
-  - [Table of Contents](#table-of-contents)
   - [Dataset](#dataset)
   - [Models](#models)
   - [Benchmarks](#benchmarks)
