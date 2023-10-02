@@ -12,7 +12,7 @@ This repository is dedicated to the paper titled [**"Mukhyansh: A Headline Gener
 
 - [Mukhyansh](#Mukhyansh)
   - [Table of Contents](#table-of-contents)
-  - [Datasets](#dataset)
+  - [Dataset](#dataset)
   - [Models](#models)
   - [Benchmarks](#benchmarks)
   - [License](#license)
@@ -20,7 +20,10 @@ This repository is dedicated to the paper titled [**"Mukhyansh: A Headline Gener
 
 ## Dataset
 ***Disclaimer: You must agree to the [license](#license) and terms of use before using the dataset.***
-Will be updated.
+
+## Models
+Will be updated soon.
+
 ## License
 Contents of this repository are restricted to only non-commercial research purposes under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/). Copyright of the dataset contents belongs to the original copyright holders.
 
