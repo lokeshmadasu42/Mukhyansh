@@ -1,6 +1,6 @@
 ## Train and Evaluate FastText+GRU model
 
-Please check the following example snippet to train the FastText+GRU model.
+Please check the following example(for `kannada`) snippet to train the FastText+GRU model.
 
 ```bash
 python3 seq2seq.py \
@@ -20,15 +20,15 @@ python3 seq2seq.py \
     --test_batch_size 1 \
     --epochs 1 \
     --rnn_type 'gru' \
-    --max_input_length 150 \
-    --max_target_length 30 \
+    --max_input_length 80 \
+    --max_target_length 25 \
     --beam_size 5 \
     --beamsearch_length_penalty 0.1
 
 ```
 ## Train and Evaluate BPE+GRU model
 
-Here is the example snippet to train the BPE+GRU model.
+Here is the example(for `kannada`) snippet to train the BPE+GRU model.
 
 ```bash
 python3 seq2seq.py \
