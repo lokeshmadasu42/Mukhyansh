@@ -20,8 +20,8 @@ python3 seq2seq.py \
     --test_batch_size 1 \
     --epochs 1 \
     --rnn_type 'gru' \
-    --max_input_length 80 \
-    --max_target_length 25 \
+    --max_input_length 200 \
+    --max_target_length 20 \
     --beam_size 5 \
     --beamsearch_length_penalty 0.1
 
@@ -49,7 +49,7 @@ python3 seq2seq.py \
     --test_batch_size 1 \
     --epochs 1 \
     --rnn_type 'gru' \
-    --max_input_length 150 \
+    --max_input_length 300 \
     --max_target_length 30 \
     --beam_size 5 \
     --beamsearch_length_penalty 0.1
