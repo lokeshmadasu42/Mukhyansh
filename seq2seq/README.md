@@ -25,3 +25,6 @@ python3 seq2seq.py \
     --beamsearch_length_penalty 0.1
 
 ```
+Arguments:
+- `vocab_csv`: 
+- `train_file` :
