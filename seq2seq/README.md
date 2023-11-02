@@ -1,4 +1,34 @@
-## Training & Evaluation
+## Train and Evaluate FastText+GRU model
+
+Please check the following example snippet to train the FastText+GRU model.
+
+```bash
+python3 seq2seq.py \
+    --vocab_csv data/kannada_vocab.csv \
+    --train_file data/kannada_train.jsonl \
+    --dev_file data/kannada_dev.jsonl \
+    --test_file data/kannada_test.jsonl \
+    --model_weights model_weights.h5 \
+    --test_outputs_file test_prediction.txt \
+    --fastText_embeddings_file cc.kn.300.bin \
+    --use_bpe False \
+    --language 'kannada' \
+    --do_train True \
+    --do_test True \
+    --train_batch_size 32 \
+    --val_batch_size 16 \
+    --test_batch_size 1 \
+    --epochs 1 \
+    --rnn_type 'gru' \
+    --max_input_length 150 \
+    --max_target_length 30 \
+    --beam_size 5 \
+    --beamsearch_length_penalty 0.1
+
+```
+## Train and Evaluate BPE+GRU model
+
+Here is the example snippet to train the BPE+GRU model.
 
 ```bash
 python3 seq2seq.py \
@@ -6,7 +36,7 @@ python3 seq2seq.py \
     --train_file data/kannada_train.jsonl \
     --dev_file data/kannada_dev.jsonl \
     --test_file data/kannada_test.jsonl \
-    --model_weights model_weights_9.h5 \
+    --model_weights model_weights.h5 \
     --test_outputs_file test_prediction.txt \
     --use_bpe True \
     --bpe_lang_code 'kn' \
@@ -25,6 +55,7 @@ python3 seq2seq.py \
     --beamsearch_length_penalty 0.1
 
 ```
+
 ## Arguments
 
 - `vocab_csv` (file_path): This is a .csv file that should contain two columns: 1) Index and 2) tokens. It contains the top 40,000 frequent tokens/words in the corpus.
@@ -45,7 +76,7 @@ python3 seq2seq.py \
 
 - `bpe_lang_code` (str, optional): Specify the language code to load the corresponding BPE embeddings.
 
-- `bpe_vocab_size` (int, optional): Specify the BPE vocabulary size, for example, 1000, 5000, 10000, 50000, 100000, etc.
+- `bpe_vocab_size` (int, optional, defaults to 50000): Specify the BPE vocabulary size, for example, 1000, 5000, 10000, 50000, 100000, etc.
 
 - `language` (str, optional): Specify the language name for multilingual rouge score calculation. For example, ['telugu', 'tamil', 'kannada', 'malayalam', 'hindi', 'bengali', 'marathi', 'gujarati'].
 
@@ -67,6 +98,6 @@ python3 seq2seq.py \
 
 - `max_target_length` (int): Specify the maximum total sequence length for the target text.
 
-- `beam_size` (int, optional): Specify the number of beams to use for evaluation. This argument will be used during evaluation/prediction.
+- `beam_size` (int, optional, defaults to 5): Specify the number of beams to use for evaluation. This argument will be used during evaluation/prediction.
 
-- `beamsearch_length_penalty` (float, optional): Specify the length penalty (alpha value) for beam search.
+- `beamsearch_length_penalty` (float, optional, defaults to 0.0): Specify the length penalty (alpha value) for beam search.
