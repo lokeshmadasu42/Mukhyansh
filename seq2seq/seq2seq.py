@@ -746,7 +746,7 @@ if __name__ == '__main__':
     parser.add_argument('--train_file', required=True, help='train data file in .jsonl format')
     parser.add_argument('--dev_file', required=True, help='dev data file in .jsonl format')
     parser.add_argument('--test_file', help='test data file in .jsonl format')
-    parser.add_argument('--model_weights', help='model weights file path(model_weights.h5)')
+    parser.add_argument('--model_weights', required=True, help='model weights file path(model_weights.h5)')
     parser.add_argument('--test_outputs_file', default='./test_predictions.txt', help='test predictions txt file path')
     parser.add_argument('--fastText_embeddings_file' ,help="fastText embeddings file path, ex. ./cc.te.300.bin")
     parser.add_argument('--use_bpe', required=True, default='False', choices=['True','False'])
