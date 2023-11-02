@@ -4,13 +4,13 @@ Please check the following example(for `kannada`) snippet to train the FastText+
 
 ```bash
 python3 seq2seq.py \
-    --vocab_csv data/kannada_vocab.csv \
-    --train_file data/kannada_train.jsonl \
-    --dev_file data/kannada_dev.jsonl \
-    --test_file data/kannada_test.jsonl \
-    --model_weights model_weights.h5 \
-    --test_outputs_file test_prediction.txt \
-    --fastText_embeddings_file cc.kn.300.bin \
+    --vocab_csv 'data/kannada_vocab.csv' \
+    --train_file 'data/kannada_train.jsonl' \
+    --dev_file 'data/kannada_dev.jsonl' \
+    --test_file 'data/kannada_test.jsonl' \
+    --model_weights './model_weights.h5' \
+    --test_outputs_file './test_prediction.txt' \
+    --fastText_embeddings_file './cc.kn.300.bin' \
     --use_bpe False \
     --language 'kannada' \
     --do_train True \
@@ -32,12 +32,12 @@ Here is the example(for `kannada`) snippet to train the BPE+GRU model.
 
 ```bash
 python3 seq2seq.py \
-    --vocab_csv data/kannada_bpe_vocab.csv \
-    --train_file data/kannada_train.jsonl \
-    --dev_file data/kannada_dev.jsonl \
-    --test_file data/kannada_test.jsonl \
-    --model_weights model_weights.h5 \
-    --test_outputs_file test_prediction.txt \
+    --vocab_csv 'data/kannada_bpe_vocab.csv' \
+    --train_file 'data/kannada_train.jsonl' \
+    --dev_file 'data/kannada_dev.jsonl' \
+    --test_file 'data/kannada_test.jsonl' \
+    --model_weights './model_weights.h5' \
+    --test_outputs_file './test_prediction.txt' \
     --use_bpe True \
     --bpe_lang_code 'kn' \
     --bpe_vocab_size 50000 \
