@@ -1,3 +1,3 @@
 # ignore the .sh file in seq2seq
-seq2seq/
-transformers/
+data/
+seq2seq/train_sbatch_run.sh
