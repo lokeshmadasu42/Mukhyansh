@@ -26,5 +26,25 @@ python3 seq2seq.py \
 
 ```
 Arguments:
-- `vocab_csv`: 
+- `vocab_csv` : 
 - `train_file` :
+- `dev_file` :
+- `test_file` :
+- `model_weights` :
+- `test_outputs_file` :
+- `fastText_embeddings_file` :
+- `use_bpe` :
+- `bpe_lang_code` :
+- `bpe_vocab_size` :
+- `language` :
+- `do_train` :
+- `do_test` :
+- `train_batch_size` :
+- `val_batch_size` :
+- `test_batch_size` :
+- `epochs` :
+- `rnn_type` :
+- `max_input_length` :
+- `max_target_length` :
+- `beam_size` :
+- `beamsearch_length_penalty` :
