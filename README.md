@@ -25,7 +25,7 @@ Todo : Dataset Stats table and Category wise counts table. List of websites used
 To use this code, you need to have Python 3.7.11 installed. You can install the required Python packages using pip:
 
 ```bash
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 ## Models
@@ -52,7 +52,7 @@ python3 run_summarization.py \
     --save_strategy "epoch" \
     --evaluation_strategy "epoch" \
     --overwrite_output_dir True \
-    --predict_with_generate $@ 2>&1>./hg_log.txt
+    --predict_with_generate $@ 2>&1>./hg_mt5_log.txt
 
 ```
 
@@ -79,12 +79,27 @@ python3 run_summarization.py \
     --save_strategy "epoch" \
     --evaluation_strategy "epoch" \
     --overwrite_output_dir True \
-    --predict_with_generate $@ 2>&1>./hg_log.txt
+    --predict_with_generate $@ 2>&1>./hg_ssib_log.txt
 
 ```
 
 
 ***Note: For fine-tuning IndicBARTSS model, you should include `--lang_id` argument in the above command. For example, if you are doing it for Telugu language the `lang_id` will be `<2te>`. Here is the list of language id's: `<2te>`,`<2ta>`,`<2kn>`,`<2ml>`,`<2hi>`,`<2bn>`,`<2mr>`,`<2gu>`.***
+
+## Benchmarks
+
+| Language | FastText+LSTM | FastText+GRU | BPEmb+GRU | mT5-small | SSIB |
+|---------|--------------|-------------|----------|----------|------|
+| te      | 32.02        | 32.7        | 29.31    | 38.35    | 37.33|
+| ta      | 32.2         | 31.26       | 32.04    | 41.18    | 41.16|
+| kn      | 25.25        | 22.84       | 23.6     | 33.34    | 32.59|
+| ml      | 28.17        | 23.44       | 25.36    | 34.63    | 32.04|
+| hi      | 29.5         | 28.45       | 28.94    | 33.65    | 36.18|
+| bn      | 17.47        | 14.9        | 9.84     | 21.56    | 22.04|
+| mr      | 16.83        | 14.04       | 17.54    | 26.41    | 27.08|
+| gu      | 14.84        | 9.48        | 14.94    | 20.43    | 23.05|
+| Avg     | 24.54        | 22.14       | 22.7     | 31.19    | 31.43|
+
 
 ## License
 Contents of this repository are restricted to only non-commercial research purposes under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/). Copyright of the dataset contents belongs to the original copyright holders.
