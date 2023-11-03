@@ -19,8 +19,7 @@ This repository is dedicated to the paper titled [**"Mukhyansh: A Headline Gener
 
 ## Dataset
 ***Disclaimer: You must agree to the [license](#license) and terms of use before using the dataset.***
-Todo : Dataset Stats table and Category wise counts table. List of websites used for scraping.
-Train-Dev-Test splits counts of each language:
+***Train-Dev-Test splits counts of each language:***
 
 | Language | Train  | Dev   | Test  |
 |----------|--------|-------|-------|
@@ -33,7 +32,7 @@ Train-Dev-Test splits counts of each language:
 | mr       | 301,001 | 26,751 | 6,690 |
 | gu       | 248,367 | 22,073 | 5,518 |
 
-Category wise statistics of Mukhyansh:
+***Category wise statistics of Mukhyansh:***
 
 | News Category   | te     | ta    | kn    | ml    | hi     | bn    | mr    | gu    |
 |-----------------|--------|-------|-------|-------|--------|-------|-------|-------|
