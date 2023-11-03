@@ -88,6 +88,8 @@ python3 run_summarization.py \
 
 ## Benchmarks
 
+Multilingual ROUGE-L scores of various baseline models of Mukhyansh for each language.
+
 | Language | FastText+LSTM | FastText+GRU | BPEmb+GRU | mT5-small | IndicBARTSS |
 |---------|--------------|-------------|----------|----------|------|
 | te      | 32.02        | 32.70       | 29.31    | 38.35    | 37.33|
@@ -99,6 +101,20 @@ python3 run_summarization.py \
 | mr      | 16.83        | 14.04       | 17.54    | 26.41    | 27.08|
 | gu      | 14.84        | 9.48        | 14.94    | 20.43    | 23.05|
 | Avg     | 24.54        | 22.14       | 22.70    | 31.19    | 31.43|
+
+### Hyper-parameters
+
+| Parameters         | Seq-Seq(FastText) | Seq-Seq(BPEmb) | mT5-small | IndicBARTSS |
+|--------------------|-------------------|----------------|-----------|------------|
+| Max Source Length  | 200               | 300            | 1024      | 1024       |
+| Max Target Length  | 20                | 30             | 30        | 30         |
+| Vocabulary Size    | 40000             | 40000          | 250112    | 64000      |
+| Beam Width         | 5                 | 5              | 4         | 4          |
+| Batch Size         | 16                | 16             | 16        | 16         |
+| Optimizer          | Adam              | Adam           | Adam      | Adam       |
+| Learning Rate      | 1e-4              | 1e-4           | 5e-5      | 5e-5       |
+| (GPU, CPU)         | (1,10)            | (1,10)         | (4,40)    | (4,40)     |
+
 
 
 ## License
