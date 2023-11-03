@@ -20,6 +20,34 @@ This repository is dedicated to the paper titled [**"Mukhyansh: A Headline Gener
 ## Dataset
 ***Disclaimer: You must agree to the [license](#license) and terms of use before using the dataset.***
 Todo : Dataset Stats table and Category wise counts table. List of websites used for scraping.
+Train-Dev-Test splits counts of each language:
+
+| Language | Train  | Dev   | Test  |
+|----------|--------|-------|-------|
+| te       | 825,372 | 82,571 | 9,179 |
+| ta       | 298,543 | 26,539 | 6,626 |
+| kn       | 304,122 | 27,044 | 6,757 |
+| ml       | 283,555 | 25,190 | 6,327 |
+| hi       | 540,568 | 48,042 | 12,013 |
+| bn       | 253,139 | 22,514 | 5,620 |
+| mr       | 301,001 | 26,751 | 6,690 |
+| gu       | 248,367 | 22,073 | 5,518 |
+
+Category wise statistics of Mukhyansh:
+
+| News Category   | te     | ta    | kn    | ml    | hi     | bn    | mr    | gu    |
+|-----------------|--------|-------|-------|-------|--------|-------|-------|-------|
+| state           | 698,059 | 133,599 | 163,857 | 144,491 | -      | 143,804 | 184,045 | 123,183 |
+| national        | 91,787  | 80,711  | 61,170  | 92,833  | 314,528 | 42,913  | 72,182  | 53,248  |
+| entertainment   | 59,244  | 31,265  | 22,697  | 14,939  | 80,202  | 31,470  | 2,819   | 19,710  |
+| international   | 24,262  | 29,463  | 26,092  | 34,008  | 29,668  | 20,552  | 15,347  | 37,682  |
+| sports          | 19,933  | 29,186  | 18,775  | 10,204  | 78,190  | 30,676  | 29,947  | 19,337  |
+| business        | 13,495  | 12,874  | 8,747   | 3,446   | 60,524  | 775    | 10,379  | 21,884  |
+| crime           | 8,917   | 6,656  | 7,541   | 7,064   | 8,052   | -      | 16,489  | -      |
+| covid           | 1,425   | 6,470  | 14,147  | 4,348   | -      | 4,205  | -      | -      |
+| politics        | -      | 4,484  | 5,816   | 843    | 29,459  | 346    | 3,234   | -      |
+| other           | -      | -      | 9,081   | 2,896   | -      | 6,532  | -      | 914    |
+
 
 ## Installation
 To use this code, you need to have Python 3.7.11 installed. You can install the required Python packages using pip:
@@ -100,7 +128,7 @@ Multilingual ROUGE-L scores of various baseline models of Mukhyansh for each lan
 | bn      | 17.47        | 14.90       | 9.84     | 21.56    | 22.04|
 | mr      | 16.83        | 14.04       | 17.54    | 26.41    | 27.08|
 | gu      | 14.84        | 9.48        | 14.94    | 20.43    | 23.05|
-| Avg     | 24.54        | 22.14       | 22.70    | 31.19    | 31.43|
+|***Avg***| 24.54        | 22.14       | 22.70    | 31.19    | 31.43|
 
 ***Hyper-parameters:***
 
