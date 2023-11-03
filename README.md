@@ -21,8 +21,18 @@ This repository is dedicated to the paper titled [**"Mukhyansh: A Headline Gener
 ***Disclaimer: You must agree to the [license](#license) and terms of use before using the dataset.***
 Todo : Dataset Stats table and Category wise counts table. List of websites used for scraping.
 
+## Installation
+To use this code, you need to have Python 3.7.11 installed. You can install the required Python packages using pip:
+
+```bash
+pip install -r requirements.txt
+```
+
 ## Models
-Please run the following command to Fine-tune the transformer models such as mT5-small and IndicBARTSS.
+
+### Fine-tune mT5-small Model
+To fine-tune the mT5-small model, run the following command:
+
 ```bash
 python3 run_summarization.py \
     --model_name_or_path google/mt5-small \
@@ -45,6 +55,35 @@ python3 run_summarization.py \
     --predict_with_generate $@ 2>&1>./hg_log.txt
 
 ```
+
+### Fine-tune IndicBARTSS Model
+To fine-tune the IndicBARTSS model, run the following command:
+
+```bash
+python3 run_summarization.py \
+    --model_name_or_path ai4bharat/IndicBARTSS \
+    --do_train True \
+    --do_eval True \
+    --do_predict True \
+    --source_prefix "summarize: " \
+    --lang_id '<2te>' \
+    --train_file <path to the '.jsonl' or '.csv' file> \
+    --validation_file <path to the '.jsonl' or '.csv' file> \
+    --test_file <path to the '.jsonl' or '.csv' file> \
+    --max_target_length <Specify the maximum target sequence length> \
+    --output_dir <path to the output directory> \
+    --per_device_train_batch_size=4 \
+    --per_device_eval_batch_size=4 \
+    --num_train_epochs 10 \
+    --logging_strategy "epoch" \
+    --save_strategy "epoch" \
+    --evaluation_strategy "epoch" \
+    --overwrite_output_dir True \
+    --predict_with_generate $@ 2>&1>./hg_log.txt
+
+```
+
+
 ***Note: For fine-tuning IndicBARTSS model, you should include `--lang_id` argument in the above command. For example, if you are doing it for Telugu language the `lang_id` will be `<2te>`. Here is the list of language id's: `<2te>`,`<2ta>`,`<2kn>`,`<2ml>`,`<2hi>`,`<2bn>`,`<2mr>`,`<2gu>`.***
 
 ## License
