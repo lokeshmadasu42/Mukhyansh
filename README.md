@@ -102,7 +102,7 @@ Multilingual ROUGE-L scores of various baseline models of Mukhyansh for each lan
 | gu      | 14.84        | 9.48        | 14.94    | 20.43    | 23.05|
 | Avg     | 24.54        | 22.14       | 22.70    | 31.19    | 31.43|
 
-### Hyper-parameters
+***Hyper-parameters:***
 
 | Parameters         | Seq-Seq(FastText) | Seq-Seq(BPEmb) | mT5-small | IndicBARTSS |
 |--------------------|-------------------|----------------|-----------|------------|
