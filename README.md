@@ -44,7 +44,7 @@ python3 run_summarization.py \
     --save_strategy "epoch" \
     --evaluation_strategy "epoch" \
     --overwrite_output_dir True \
-    --predict_with_generate $@ 2>&1>./hg_telugu_1m_log.txt
+    --predict_with_generate $@ 2>&1>./hg_log.txt
 
 
 ```
