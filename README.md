@@ -1,37 +1,48 @@
 # Mukhyansh
 
-This repository is dedicated to the paper titled [**"Mukhyansh: A Headline Generation Dataset for Indic Languages"**](). Here, you will find the following resources:
-
-1. **Dataset**: Will be released soon.
-
-2. **Model Checkpoints**: Will be released soon.
-
-3. **Code**: Will be released soon.
+This repository contains the code,data and models of the paper titled [***"Mukhyansh: A Headline Generation Dataset for Indic Languages"***]() published in the 37th Pacific Asia Conference on
+Language, Information and Computation (PACLIC-37)
 
 ## Table of Contents
 
 - [Mukhyansh](#Mukhyansh)
   - [Dataset](#dataset)
+  - [Installation](#installation)
   - [Models](#models)
   - [Benchmarks](#benchmarks)
   - [License](#license)
   - [Citation](#citation)
 
 ## Dataset
+
 ***Disclaimer: You must agree to the [license](#license) and terms of use before using the dataset.***
+
+We are releasing the Mukhyansh, an extensive multilingual dataset, tailored for Indian language headline generation. Comprising an impressive collection of over 3.39 million article-headline pairs, Mukhyansh spans across eight prominent Indian languages, namely Telugu, Tamil, Kannada, Malayalam, Hindi, Bengali, Marathi, and Gujarati.
+
+All dataset files are in `.jsonl` format i.e. one JSON per line. Here is an example from `Telugu` dataset.
+
+```
+  {"id": 263,
+ "url": "https://www.ap7am.com/flash-news-682791/modi-coronavirus-cases-in-india",
+ "text": "ప్రధాన మంత్రి నరేంద్ర మోదీ మన్‌ కీ బాత్‌లో ప్రజలతో మాట్లాడుతున్నారు. కరోనాపై పోరులో భాగంగా లాక్‌డౌన్‌ వంటి అసాధారణ నిర్ణయాలు తీసుకోవాల్సి వస్తోందని, ప్రజలు ఇబ్బందులు ఎదుర్కొంటున్నారని, తనను క్షమించాలని వ్యాఖ్యానించారు. తనపై కొందరు ఆగ్రహంతో ఉన్నారని తనకు తెలుసని అన్నారు. అయినప్పటికీ, కరోనా వ్యాప్తిని అరికట్టడానికి ఈ కఠిన చర్యలు తీసుకోకతప్పదని చెప్పారు.\nముఖ్యంగా పేద ప్రజలు ఇబ్బందులు ఎదుర్కొంటున్నారని  మోదీ గుర్తు చేశారు. ప్రస్తుతం మనం ఎదుర్కొంటున్నది జీవన్మరణ సమస్య అయినందువల్లే కఠిన నిర్ణయం తీసుకున్నామని చెప్పారు. వైరస్ వ్యాప్తి ప్రారంభమైన రోజుల్లో చర్యలు తీసుకుంటేనే కరోనాను తొలగించవచ్చని అన్నారు. వైరస్ వ్యాప్తిని అరికట్టాలంటే దేశ ప్రజలు కొన్ని రోజులు లక్ష్మణ రేఖ దాటొద్దని వ్యాఖ్యానించారు.",
+ "title": "ప్రజలు నన్ను క్షమించండి: 'మన్‌ కీ బాత్‌'లో ప్రధాని మోదీ",
+ "category": "state"}
+
+```
 
 ***Train-Dev-Test splits counts of each language:***
 
-| Language | Train  | Dev   | Test  |
-|----------|--------|-------|-------|
-| te       | 825,372 | 82,571 | 9,179 |
-| ta       | 298,543 | 26,539 | 6,626 |
-| kn       | 304,122 | 27,044 | 6,757 |
-| ml       | 283,555 | 25,190 | 6,327 |
-| hi       | 540,568 | 48,042 | 12,013 |
-| bn       | 253,139 | 22,514 | 5,620 |
-| mr       | 301,001 | 26,751 | 6,690 |
-| gu       | 248,367 | 22,073 | 5,518 |
+| Language   | ISO 639-1 Code | Train  | Dev   | Test  | Total |
+|------------|----------------|--------|-------|-------|-------|
+| Telugu     | te             | 825,372 | 82,571 | 9,179 | 917,122 |
+| Tamil      | ta             | 298,543 | 26,539 | 6,626 | 331,708 |
+| Kannada    | kn             | 304,122 | 27,044 | 6,757 | 337,923 |
+| Malayalam  | ml             | 283,555 | 25,190 | 6,327 | 315,072 |
+| Hindi      | hi             | 540,568 | 48,042 | 12,013 | 600,623 |
+| Bengali    | bn             | 253,139 | 22,514 | 5,620 | 281,273 |
+| Marathi    | mr             | 301,001 | 26,751 | 6,690 | 334,442 |
+| Gujarati   | gu             | 248,367 | 22,073 | 5,518 | 275,958 |
+
 
 ***Category wise statistics of Mukhyansh:***
 
@@ -57,6 +68,7 @@ pip3 install -r requirements.txt
 ```
 
 ## Models
+We used [huggingface transformers](https://github.com/huggingface/transformers) of version 4.25.0.
 
 ### Fine-tune mT5-small Model
 To fine-tune the mT5-small model, run the following command:
@@ -128,7 +140,7 @@ Multilingual ROUGE-L scores of various baseline models of Mukhyansh for each lan
 | bn      | 17.47        | 14.90       | 9.84     | 21.56    | 22.04|
 | mr      | 16.83        | 14.04       | 17.54    | 26.41    | 27.08|
 | gu      | 14.84        | 9.48        | 14.94    | 20.43    | 23.05|
----------------------------------------------------------------------------------
+
 |***Avg***| 24.54        | 22.14       | 22.70    | 31.19    | 31.43|
 
 ***Hyper-parameters:***
