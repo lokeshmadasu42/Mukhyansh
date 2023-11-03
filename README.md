@@ -17,6 +17,8 @@ Language, Information and Computation (PACLIC-37)
 
 ***Disclaimer: You must agree to the [license](#license) and terms of use before using the dataset.***
 
+Please click [here]() to download the language-wise datasets.
+
 We are releasing the Mukhyansh, an extensive multilingual dataset, tailored for Indian language headline generation. Comprising an impressive collection of over 3.39 million article-headline pairs, Mukhyansh spans across eight prominent Indian languages, namely Telugu, Tamil, Kannada, Malayalam, Hindi, Bengali, Marathi, and Gujarati.
 
 All dataset files are in `.jsonl` format i.e. one JSON per line. Here is an example from `Telugu` dataset.
@@ -69,7 +71,7 @@ pip3 install -r requirements.txt
 
 ## Models
 We used [huggingface transformers](https://github.com/huggingface/transformers) of version 4.25.0.
-
+Please click [here]() to download the language-wise model-checkpoints.
 ### Fine-tune mT5-small Model
 To fine-tune the mT5-small model, run the following command:
 
