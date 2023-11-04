@@ -26,7 +26,7 @@ python3 seq2seq.py \
     --beamsearch_length_penalty 0.1
 
 ```
-## Train and Evaluate BPE+GRU model
+## Train and Evaluate BPEmb+GRU model
 
 Here is the example(for `kannada`) snippet to train the BPE+GRU model.
 

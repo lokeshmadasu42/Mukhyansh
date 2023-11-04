@@ -1,7 +1,7 @@
 # Mukhyansh
 
 This repository contains the code,data and models of the paper titled [***"Mukhyansh: A Headline Generation Dataset for Indic Languages"***]() published in the 37th Pacific Asia Conference on
-Language, Information and Computation (PACLIC-37)
+Language, Information and Computation (PACLIC-2023)
 
 ## Table of Contents
 
@@ -130,7 +130,7 @@ python3 run_summarization.py \
 
 ## Benchmarks
 
-Multilingual ROUGE-L scores of various baseline models of Mukhyansh for each language.
+ROUGE-L scores of various baseline models of Mukhyansh for each language. We use the [Multilingual ROUGE metric](https://github.com/csebuetnlp/xl-sum/tree/master/multilingual_rouge_scoring) from [xl-sum](https://github.com/csebuetnlp/xl-sum/tree/master).
 
 | Language | FastText+LSTM | FastText+GRU | BPEmb+GRU | mT5-small | IndicBARTSS |
 |---------|--------------|-------------|----------|----------|------|
