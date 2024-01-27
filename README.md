@@ -1,6 +1,6 @@
 # Mukhyansh
 
-This repository contains the code,data and models of the paper titled [***"Mukhyansh: A Headline Generation Dataset for Indic Languages"***]() published in the 37th Pacific Asia Conference on
+This repository contains the code,data and models of the paper titled [***"Mukhyansh: A Headline Generation Dataset for Indic Languages"***](https://arxiv.org/abs/2311.17743) published in the 37th Pacific Asia Conference on
 Language, Information and Computation (PACLIC-2023)
 
 ## Table of Contents
