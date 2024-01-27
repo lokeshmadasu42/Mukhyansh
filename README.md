@@ -171,7 +171,6 @@ If you use any of the datasets, models or code modules, please cite the followin
   title={Mukhyansh: A Headline Generation Dataset for Indic Languages},
   author={Madasu, Lokesh and Kanumolu, Gopichand and Surange, Nirmal and Shrivastava, Manish},
   journal={arXiv preprint arXiv:2311.17743},
-  booktitle={Proceedings of the 37th Pacific Asia Conference on Language, Information, and Computation},
   url= "https://arxiv.org/abs/2311.17743",
   year={2023}
 }
